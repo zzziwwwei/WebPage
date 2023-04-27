@@ -4,98 +4,46 @@
 <head>
     <link href="style.css" rel="stylesheet" type="text/css">
     <style>
-        html,
-        body {
-            height: 100%;
-            padding: 0;
-            margin: 0;
-        }
-
-        .fill {
-            height: 100vh;
-            width: 100%;
-            float: left;
-        }
-
-        .topMenu {
-            position: relative;
-            height: 10vh;
-            width: 85%;
-            margin: auto;
-            background-color: rgb(202, 198, 182);
-        }
-
-        .loginMenu {
-            position: relative;
-            height: 420px;
-            width: 380px;
-            margin: auto;
-            margin-top: 25vh;
-            background-color: #1c1c1c;
-        }
-
-        .loginMenu form {
-            float: left;
-            position: relative;
-            padding: 20px 20px;
-            background-color: #222;
-            inset: 4px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-        .loginMenu form div h2 {
-            font-size: 2em;
-            color: aliceblue;
-        }
     </style>
 </head>
 
 <body>
-     <canvas class="fill" id="canvas" ;></canvas>
-    <!--<div class="fill" style="position: absolute">
+    <canvas class="fill" id="canvas" ;></canvas>
+    <div class="fill" style="position: absolute">
         <div class="topMenu">
         </div>
-        <div class="loginMenu">
-            <form>
-                <div>
-                    <h2>Sign in</h2>
-                </div>
-                <div>
-                    <div>
-                        <ion-icon name="mail-outline"></ion-icon>
-                        <input type="text" required="required">
-                        <span>Username</span>
-                    </div>
-                    <div>
-                        <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" required="required">
-                        <span>password</span>
-                    </div>
-                </div>
-                <div>
-                    <label for=""><input type="checkbox">Remember me forget password</label>
-                </div>
-                <div>
-                    <input type="submit" volue="Login">
-                </div>
-                <div>
-                    <a href="#">Dont have a account resgistor</a>
-                </div>
+        <div class="selfIntroduction">
+            <div class="title">Hi,I'm zeiwei Lin</div>
+            <div class="head">Frontend Developer</div>
+            <div class="sel_introduction">
+                My name is Zi-Wei, and I specialize in web front-end development, including HTML, CSS, and JavaScript. 
+                I enjoy creating interactive experiences, which is why I particularly enjoy using JavaScript to build websites. 
+                I am interested in applying for a position as a front-end engineer or a game front-end engineer.Here's a link to my website, I hope you'll like it.
+            </div>
 
-            </form>
+            <div class="email">
+                <a href="#" id="button1">Hire Me </a>
+          
+                <a href="#" id="button2" style="margin-left: 20px;">Let's talk </a>
+            </div>
         </div>
-
-    </div>-->
+    </div>
 
 
     <script src="main.js">
     </script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        let buttons=[];
+        buttons.push(document.getElementById("button1")) 
+        buttons.push(document.getElementById("button2"))
+        console.log(buttons)
+        buttons.forEach(i=>{
+            i.addEventListener('click',function(e){
+               
+            })
+        })
+        
+    </script>
 </body>
 
 </html>

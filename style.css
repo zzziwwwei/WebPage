@@ -1,47 +1,83 @@
 html,
-        body {
-            height: 100%;
-            padding: 0;
-            margin: 0;
-        }
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins'
+}
 
-        .fill {
-            height: 100vh;
-            width: 100%;
-            float: left;
-        }
+.fill {
+    height: 100vh;
+    width: 100%;
+    float: left;
+}
 
-        .topMenu {
-            position: relative;
-            height: 10vh;
-            width: 85%;
-            margin: auto;
-            background-color: rgb(202, 198, 182);
-        }
+.topMenu {
+    position: relative;
+    height: 10vh;
+    width: 85%;
+    margin: auto;
+    background-color: rgb(202, 198, 182);
+}
 
-        .loginMenu {
-            position: relative;
-            height: 420px;
-            width: 380px;
-            margin: auto;
-            margin-top: 25vh;
-            background-color: #1c1c1c;
-        }
+.selfIntroduction {
+    position: relative;
+    height: 320px;
+    width: 650px;
+    margin-left: 8%;
+    margin-top: 25vh;
+    padding-top: 40px;
+    padding: 2% 5%;
+    background-color: rgb(63, 59, 59);
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
+}
 
-        .loginMenu form {
-            float: left;
-            position: relative;
-            padding: 20px 20px;
-            background-color: #222;
-            inset: 4px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+.selfIntroduction .title{
+    padding-top: 20px;
+    color: #fff;
+    font-weight: 600;
+    text-align: left;
+    font-size: 3em;
+    letter-spacing: 0.05em;
+}
+.selfIntroduction .head{
+    color: #6e0ae0;
+    font-weight: 300;
+    text-align: left;
+    font-size: 2em;
+    letter-spacing: 0.05em;
+}
+.selfIntroduction .sel_introduction{
+    color: #fff;
+    font-weight: 50;
+    text-align: left;
+    padding-top: 30px;
+    letter-spacing: 0.05em;
+}
+.selfIntroduction .email{
+    position: relative;
+    color: #fff;
+    font-weight: 50;
+    text-align: left;
+    padding-top: 30px;
+    letter-spacing: 0.05em;
+}
+.selfIntroduction .email a{
+    display:inline-block;
+    color: #000000;
+    font-weight: 50;
+    text-align: left;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 5px cyan , 0 0 25px cyan    
+}
+.selfIntroduction .email a:hover{
+    box-shadow: 0 0 5px rgb(101, 25, 163) , 0 0 25px rgb(101, 25, 163) 
+}
 
-        }
 
-        .loginMenu form div h2 {
-            font-size: 2em;
-            color: aliceblue;
-        }
+
