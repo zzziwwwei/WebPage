@@ -1,4 +1,10 @@
 html,
+
+
+:root {
+    --x: 45deg;
+}
+
 body {
     height: 100%;
     padding: 0;
@@ -12,72 +18,193 @@ body {
     float: left;
 }
 
-.topMenu {
-    position: relative;
-    height: 10vh;
-    width: 85%;
-    margin: auto;
-    background-color: rgb(202, 198, 182);
+@media (max-width: 4000px) {
+
+    .line {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        height: 2vh;
+        width: 30%;
+        margin-left: 35%;
+        background-color: rgba(255, 120, 120, 0.9);
+        border-radius: 0px 0px 500px 500px;
+        transition: 0.5s;  
+    }
+
+    @keyframes line_animaste {
+        0% {
+            transform: scaleX(0);
+     
+        }
+        75%{
+            transform: scale(1);
+            transform: scale(1);
+        }
+        100% {
+            transform: scaleY(2);
+        }
+    }
+
+    .topMenu {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        height: 2vh;
+        width: 30%;
+        margin-left: 35%;
+        background-color: rgb(63, 59, 59, 0.9);
+        border-radius: 0px 0px 500px 500px;
+        box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
+        transition: 0.5s;
+    }
+
+    .topMenu div {
+        opacity: 0;
+        transition: 0.1s;
+    }
+
+    .topMenu:hover {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        height: 8vh;
+        width: 70%;
+        margin-left: 15%;
+        background-color: rgb(63, 59, 59, 0.9);
+        border-radius: 0px 0px 500px 500px;
+        box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
+    }
+
+    .topMenu:hover div {
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+        transition: 3s;
+    }
+
+    .topMenu a {
+
+        display: inline-block;
+        padding-left: 20px;
+        color: #fff;
+        font-weight: 300;
+        text-align: left;
+        font-size: 2em;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+
+    .topMenu a:hover {
+        color: #fff;
+        transform: translateY(5px);
+    }
+
+    .box {
+        position: relative;
+        height: 340px;
+        width: 650px;
+        margin-left: 8%;
+        margin-top: 35vh;
+        border-radius: 30px;
+        background: linear-gradient(var(--x), #00ccff, #0e1538, #0e1538, #e2e2e2);
+        filter: blur(10px);
+
+    }
+
+    .selfIntroduction {
+        position: absolute;
+        z-index: 3;
+        height: 340px;
+        width: 650px;
+        margin-left: 8%;
+        margin-top: 35vh;
+        border-radius: 30px;
+        background-color: rgb(63, 59, 59, 0.9);
+        overflow: hidden;
+    }
+
+    .selfIntroduction .title {
+        padding-left: 20px;
+        padding-top: 20px;
+        color: #fff;
+        font-weight: 600;
+        text-align: left;
+        font-size: 3em;
+        letter-spacing: 0.05em;
+    }
+
+    .selfIntroduction .head {
+        padding-left: 20px;
+        color: #6e0ae0;
+        font-weight: 300;
+        text-align: left;
+        font-size: 2em;
+        letter-spacing: 0.05em;
+    }
+
+    .selfIntroduction .sel_introduction {
+        padding-left: 20px;
+        color: #fff;
+        font-weight: 50;
+        text-align: left;
+        padding-top: 30px;
+        letter-spacing: 0.05em;
+    }
+
+    .selfIntroduction .email {
+        padding-left: 20px;
+        position: relative;
+        color: #fff;
+        font-weight: 50;
+        text-align: left;
+        padding-top: 30px;
+        letter-spacing: 0.05em;
+    }
+
+    .selfIntroduction .email a {
+        display: inline-block;
+        color: #000000;
+        font-weight: 50;
+        text-align: left;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        padding: 8px 10px;
+        border-radius: 40px;
+        background-color: #fff;
+        box-shadow: 0 0 5px cyan, 0 0 25px cyan
+    }
+
+    .selfIntroduction .email a:hover {
+        box-shadow: 0 0 5px rgb(101, 25, 163), 0 0 25px rgb(101, 25, 163)
+    }
+
+    .phonenumber {
+        position: absolute;
+        color: rgb(101, 206, 255);
+        font-weight: 50;
+        font-size: 1.5em;
+        padding-left: 50%;
+        letter-spacing: 0.05em;
+
+    }
+
+    .gmail {
+        position: absolute;
+        color: rgb(101, 206, 255);
+        font-weight: 50;
+        font-size: 1.5em;
+        padding-left: 50%;
+        letter-spacing: 0.05em;
+    }
+
 }
 
-.selfIntroduction {
-    position: relative;
-    height: 320px;
-    width: 650px;
-    margin-left: 8%;
-    margin-top: 25vh;
-    padding-top: 40px;
-    padding: 2% 5%;
-    background-color: rgb(63, 59, 59);
-    border-radius: 30px;
-    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
-}
+@media (max-width: 1199.98px) {}
 
-.selfIntroduction .title{
-    padding-top: 20px;
-    color: #fff;
-    font-weight: 600;
-    text-align: left;
-    font-size: 3em;
-    letter-spacing: 0.05em;
-}
-.selfIntroduction .head{
-    color: #6e0ae0;
-    font-weight: 300;
-    text-align: left;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-}
-.selfIntroduction .sel_introduction{
-    color: #fff;
-    font-weight: 50;
-    text-align: left;
-    padding-top: 30px;
-    letter-spacing: 0.05em;
-}
-.selfIntroduction .email{
-    position: relative;
-    color: #fff;
-    font-weight: 50;
-    text-align: left;
-    padding-top: 30px;
-    letter-spacing: 0.05em;
-}
-.selfIntroduction .email a{
-    display:inline-block;
-    color: #000000;
-    font-weight: 50;
-    text-align: left;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    padding: 8px 10px;
-    border-radius: 40px;
-    background-color: #fff;
-    box-shadow: 0 0 5px cyan , 0 0 25px cyan    
-}
-.selfIntroduction .email a:hover{
-    box-shadow: 0 0 5px rgb(101, 25, 163) , 0 0 25px rgb(101, 25, 163) 
-}
+@media (max-width: 890px) {}
 
+@media (max-width: 300px) {}
 
-
+@media (max-width: 575.98px) {}

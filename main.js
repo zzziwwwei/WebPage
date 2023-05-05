@@ -41,12 +41,13 @@ class circularSpace {                        //大圓形群組
         this.color = color
         this.circles = []
         this.creatNum = 5;
+        this.ppp = []
     }
     creat() {
         for (let i = 0; i < this.creatNum; i++) {
             const x = Math.random() * ((this.x + this.r) - (this.x - this.r)) + (this.x - this.r)
             const y = Math.random() * ((this.y + this.r) - (this.y - this.r)) + (this.y - this.r);
-            const radius = (canvas.width / 40 - canvas.width / 60) + canvas.width / 60;
+            const radius = (50);
             const color = "red"
             this.circles.push(new circle(x, y, radius, color))
         }
@@ -93,10 +94,11 @@ class circle {                               //小圓形群組
         this.randomTimeFlag = 0
         this.randomX = 0
         this.randomY = 0
+        
     }
     move() {
         if (this.randomTimeFlag == 0) {
-            this.randomNum = Math.floor(Math.random() * 12)
+            this.randomNum = Math.floor((Math.random() * 5)+7)
             this.randomX = Math.random() * canvas.width
             this.randomY = Math.random() * canvas.height
             this.randomTimeFlag = 1
@@ -154,26 +156,27 @@ class vector {                                 //每個圓對彼此的向量
 
 }
 
-
+let ppp = 0
 let circularSpaces
 function init() {                              //初始化
     circularSpaces = []
-    creatNum = Math.floor(Math.random() * 10) + 20;
+    
+    creatNum = Math.floor((Math.floor(Math.random() * 5) + 15)*(canvas.width/2000));
     for (let i = 0; i < creatNum; i++) {
         const x = Math.random() * canvas.width
         const y = Math.random() * canvas.height
-        const radius = Math.random() * (canvas.width / 20 - canvas.width / 30) + canvas.width / 30;
-        const color = "blue"
-        if (x - radius >= 0 && y - radius >= 0 && x + radius < canvas.width && y + radius < canvas.height) {
+        const radius = ((Math.random() * 50) + 100);
+        const color = "blue"      
+        if (x - radius >= 0 && y - radius >= 0 && x + radius < canvas.width && y + radius < canvas.height  ) {
             circularSpaces.push(new circularSpace(x, y, radius, color))
             circularSpaces[i].creat()
         }
         else {
             i--
         }
-
+       
     }
-    console.log(circularSpaces)
+    //console.log(circularSpaces)
 }
 
 let control_Circle = 0                         //全域變數滑鼠選取圓中....
@@ -214,8 +217,8 @@ function mainUpdate() {                         //mainUpdate
 function circleForce(circle0, circle1, v) {
     v0 = Math.pow((Math.pow(Math.abs(circle0.x - circle1.x), 2) + Math.pow(Math.abs(circle0.y - circle1.y), 2)), 0.5)
     if (v0 > v) {
-        circle1.x = lerp(circle1.x, circle0.x, (v0 / v) * 0.01 * 0.001)
-        circle1.y = lerp(circle1.y, circle0.y, (v0 / v) * 0.01 * 0.001)
+        circle1.x = lerp(circle1.x, circle0.x, (v0 / v) * 0.01 * 0.001*(2000/canvas.width))
+        circle1.y = lerp(circle1.y, circle0.y, (v0 / v) * 0.01 * 0.001*(2000/canvas.width))
     }
 }
 
